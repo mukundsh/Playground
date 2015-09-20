@@ -81,6 +81,12 @@ namespace Playground2
             return _heap[0];
         }
 
+        public T Peek()
+        {
+            if (Count == 0) throw new InvalidOperationException("Heap is empty");
+            return _heap[0];
+        }
+
         public T ExtractDominating()
         {
             if (Count == 0) throw new InvalidOperationException("Heap is empty");
