@@ -7,24 +7,6 @@ using System.Threading.Tasks;
 
 namespace Playground2
 {
-    //public class Heap<T> where T : IComparable
-    //{
-    //    public int Size { get; private set; }
-
-    //    public T[] Nodes { get; private set; }
-
-    //    public Heap(int size)
-    //    {
-    //        this.Size = size;
-    //        this.Nodes = new T[size];
-    //    }
-
-    //    public void AddItem(T data)
-    //    {
-
-    //    }
-    //}
-
     // http://stackoverflow.com/questions/102398/priority-queue-in-net
 
     public abstract class Heap<T> : IEnumerable<T>

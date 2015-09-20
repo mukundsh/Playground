@@ -44,23 +44,28 @@ Output : 1,2,3,4,1111
             return result;
         }
 
-        private static int FindLastIndexOfElement(int[] arr, int key, int lo, int hi)
+        public static int FindLastIndexOfElement(int[] arr, int key, int lo, int hi)
         {
+            if (hi < lo)
+            {
+                return -1;
+            }
+
             int mid = (lo + hi) / 2;
 
             if (arr[mid] == key)
             {
-                if (mid + 1 < hi)
+                if (mid == hi)
                 {
-                    if (arr[mid + 1] != key)
-                    {
-                        return mid + 1;
-                    }
-
-                    return FindLastIndexOfElement(arr, key, mid + 1, hi);
+                    return mid;
                 }
 
-                return mid;
+                if (mid + 1 <= hi && arr[mid + 1] != key)
+                {
+                    return mid;
+                }
+                
+                return FindLastIndexOfElement(arr, key, mid + 1, hi);
             }
             else if (key < arr[mid])
             {
@@ -68,7 +73,7 @@ Output : 1,2,3,4,1111
             }
             else
             {
-                return FindLastIndexOfElement(arr, key, lo, mid);
+                return FindLastIndexOfElement(arr, key, mid + 1, hi);
             }
         }
     }
