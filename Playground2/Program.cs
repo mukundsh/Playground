@@ -942,7 +942,6 @@
             leftEnd = mid - 1;
             currentPosition = left;
             
-
             while ((left <= leftEnd) && (mid <= right))
             {
                 if (input[left] <= input[mid])
