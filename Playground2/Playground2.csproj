@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ArrayProblems.cs" />
     <Compile Include="CustomHashTable.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Heap.cs" />
     <Compile Include="KthMagicalNumber.cs" />
     <Compile Include="Program.cs" />
